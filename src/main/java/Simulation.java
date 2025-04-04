@@ -73,8 +73,11 @@ public class Simulation {
     }
 
     public static void main(String[] args) {
+        Simulation sim = new Simulation(new Vehicle(Simulation.randomaltitude()));
         // create a new Simulation object with a random starting altitude
+        BurnInputStream burnSource = new BurnInputStream();
         // create a new BurnInputStream
+        sim.runSimulation(burnSource);
         // pass the new BurnInputStream to the runSimulation method
     }
 
