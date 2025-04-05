@@ -74,12 +74,12 @@ public class Vehicle {
     }
 
     public boolean stillFlying() {
-        return Altitude > 0;
+        return this.Altitude > 0;
         // return true if altitude is positive
         //return false;
     }
     public boolean outOfFuel() {
-        return Fuel <= 0;
+        return this.Fuel <= 0;
         // return true if fuel is less than or equal to zero
         //return true;
     }
