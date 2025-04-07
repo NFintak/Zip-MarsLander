@@ -23,7 +23,7 @@ public class SimulationTest {
         BurnStream burnSource = new BurnDataStream(burns);
         Simulation game = new Simulation(new Vehicle(5000));
         int okay = game.runSimulation(burnSource);
-        Assert.assertEquals(Vehicle.CRASHED, okay);
+        Assert.assertEquals(Vehicle.DEAD, okay);
     }
 
     @Test
