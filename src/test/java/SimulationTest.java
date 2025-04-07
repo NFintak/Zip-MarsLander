@@ -14,7 +14,7 @@ public class SimulationTest {
         BurnStream burnSource = new BurnDataStream(burns);
         Simulation game = new Simulation(new Vehicle(5000));
         int okay = game.runSimulation(burnSource);
-        Assert.assertEquals(okay, Vehicle.SUCCESS);
+        Assert.assertEquals(Vehicle.SUCCESS, okay);
     }
 
     @Test
@@ -31,7 +31,7 @@ public class SimulationTest {
         BurnStream burnSource = new OnBoardComputer();
         Simulation game = new Simulation(new Vehicle(10000));
         int okay = game.runSimulation(burnSource);
-        Assert.assertEquals(okay, Vehicle.SUCCESS);
+        Assert.assertEquals(Vehicle.SUCCESS, okay);
     }
 
     @Test

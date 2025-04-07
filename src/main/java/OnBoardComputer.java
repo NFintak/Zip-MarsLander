@@ -4,13 +4,15 @@ public class OnBoardComputer implements BurnStream {
     public int getNextBurn(DescentEvent status) {
         int burn = 0;
 
-        if (status.getAltitude() <= 5000 && status.getAltitude() > 500) {
+        if (status.getAltitude() <= 5500 && status.getAltitude() > 550) {
             burn = 200;
-        } else if (status.getAltitude() <= 100 && status.getAltitude() >= 50) {
+        } else if (status.getAltitude() < 550 && status.getVelocity() > 150) {
+            burn = 200;
+        } else if (status.getAltitude() <= 150 && status.getAltitude() >= 50) {
             burn = (status.getVelocity() / 2) + 100;
-        } else if (status.getAltitude() <= 50 && status.getAltitude() > 20) {
+        } else if (status.getAltitude() <= 50 && status.getAltitude() >= 25) {
             burn = 120;
-        } else if (status.getAltitude() == 5) {
+        } else if (status.getAltitude() < 10 && status.getVelocity() >= 5) {
             burn = 103;
         } else {
             burn = 100;
